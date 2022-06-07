@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Header from './../components/common/Header';
 import { updatePost } from './../modules/write';
-
+import { Helmet } from 'react-helmet-async';
 
 function WritePost() {
   const dispatch = useDispatch();
@@ -63,6 +63,9 @@ function WritePost() {
   return (
     <>
     <Header/>
+    <Helmet>
+      <title>수정중 -ALBATROSS</title>
+    </Helmet>
     <Responsive>
       <Editor onChange={onChange} title={title} body={body} />
       <TagBox onChangeTag={onChange} tags={tags} />
