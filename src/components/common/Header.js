@@ -45,7 +45,7 @@ function Header({ user, onLogout }) {
 
           {user ? (
             <div className="userSec">
-              <div className="userInfo">환영합니다!{user.username}님</div>
+              <Link to="/userInfo" className="userInfo">환영합니다!{user.username}님</Link>
               <Button onClick={onLogout}>LOG OUT</Button>
             </div>
           ) : (

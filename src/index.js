@@ -34,7 +34,7 @@ loadUser(); //랜더하기 전에 실행
 const root = createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
-    <BrowserRouter basename="%PUBLIC_URL">
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
     <HelmetProvider>
       <App />
       </HelmetProvider>

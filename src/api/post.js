@@ -19,3 +19,9 @@ export const updatePost = ({id, title,body, tags})=>
   client.patch(`/api/posts/${id}`,{title,body,tags});
 
 export const deletePost = (id)=>client.delete(`/api/posts/${id}`);
+
+
+// export const writeComment = ({id, title, body})=>
+//   client.post(`/api/posts/${id}`,{title,body});
+
+
